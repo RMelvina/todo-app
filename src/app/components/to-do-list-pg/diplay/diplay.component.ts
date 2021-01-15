@@ -28,8 +28,14 @@ export class DiplayComponent implements OnInit {
 
   // Methods
   remove(name: any) {
-    this.todoArray.removeTodoArray(name);
-    this.isAddedMsg.sendIsAddedMsg(false)
-    console.log(name);
+      this.todoArray.removeTodoArray(name);
+   
+      if(this.todoArray.todos.length  < 1){
+        this.isAddedMsg.sendIsAddedMsg(false);
+      }
+      // this.isAddedMsg.sendIsAddedMsg(false);
+    
+ 
+    console.log(this.todoArray.todos.length);
   }
 }

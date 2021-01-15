@@ -13,7 +13,7 @@ import { isAdded } from '../../../global';
 export class AddToDosComponent implements OnInit {
   // Decalration
   todoTitle = '';
-  isAdded = false
+  isAdded = false;
   constructor(
     private todoArray: TodoArrayService,
     private isAddedMsg: IsAddedMsgService
@@ -22,10 +22,17 @@ export class AddToDosComponent implements OnInit {
   ngOnInit(): void {}
   // Methods
   addTodo() {
-    this.todoArray.addTodosArray(this.todoTitle, false, this.todoTitle);
+    // this.isAddedMsg.sendIsAddedMsg(true);
+    if (this.todoTitle != '') {
+       this.todoArray.addTodosArray(this.todoTitle, false);
+       this.isAddedMsg.sendIsAddedMsg(true);
+      
+    } else {
+      alert('Field is empty');
+      this.isAddedMsg.sendIsAddedMsg(false);
+    }
+   
     this.todoTitle = '';
-        this.isAdded = true;
-    this.isAddedMsg.sendIsAddedMsg(true);
-
+    // this.isAdded = true;
   }
 }

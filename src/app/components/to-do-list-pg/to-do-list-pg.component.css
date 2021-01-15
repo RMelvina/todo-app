@@ -1,0 +1,90 @@
+@import "../../../styles.css";
+
+.todo-section {
+ 
+  /* background: linear-gradient(rgb(255, 99, 71),rgba(255, 99, 71, 0.481)); */
+  height: 100vh;
+}
+
+.heading-container {
+  color: white;
+  font-size: 2rem;
+  font-family: monospace;
+}
+.addTodos-container {
+  background-color: white;
+  width: fit-content;
+}
+.btn-container {
+  width: fit-content;
+}
+.addTodos {
+  outline: none;
+  border: none;
+  font-family: monospace;
+  font-size: 1.6rem;
+  font-weight: 300;
+}
+.addBtn {
+  font-size: 1.6rem;
+  color: lightcoral;
+  font-weight: 800;
+}
+
+.displayTasks {
+  height: 270px;
+  background-color: white;
+  width: 30.4%;
+  margin-top: 1rem;
+  overflow-y: scroll;
+}
+.display {
+  width: 100%;
+  color: black;
+  /* padding-top: 1px;
+  padding-bottom: 1px;
+  padding-left: 10px; */
+  font-family: monospace;
+  border-bottom: 1px solid lightskyblue;
+  /* font-size: 1.6rem; */
+}
+.done {
+  text-decoration: line-through;
+  text-decoration-color: tomato;
+  color: grey;
+}
+.items-display {
+  border-bottom: 1px solid lightskyblue;
+}
+
+.clearAll-container {
+  width: 30.4%;
+  height: 30px;
+  background-color: white;
+  /* display: flex;
+  align-items: center; */
+}
+.clearAll {
+  position: relative;
+  float: right;
+  padding-right: 10px;
+  color: lightcoral;
+  cursor: pointer;
+}
+.displayTodoTitle {
+  font-size: 1.4rem;
+}
+.todo-title {
+  font-size: 1.3rem;
+}
+.icon {
+  background-color: lightcoral;
+  color: white;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+}
+.icon:hover {
+  outline: 2px solid lightcoral;
+  background-color: transparent;
+  color: lightcoral;
+}

@@ -1,0 +1,38 @@
+<section class="container-fluid todo-section d-flex justify-content-center flex-column">
+
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="heading-container mt-5 d-flex align-items-center justify-content-center">
+            <h1 class="text-center fontStyle" @fadeIn>To-do-list</h1>
+        </div>
+        <!-------->
+
+        <app-add-to-dos></app-add-to-dos>
+
+        
+        <div class="container displayTasks ">
+            <app-diplay
+            [todos] = "todos">
+           </app-diplay>
+
+          
+        </div>
+
+        <div class="clearAll-container">
+            <span (click)="clearAll()" class="clearAll" *ngIf = "isAdded" @slideIn>Clear all</span>
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+
+
+</section>

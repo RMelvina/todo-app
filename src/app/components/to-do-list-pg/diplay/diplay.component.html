@@ -1,0 +1,20 @@
+
+
+    <div class="outterDisplay justify-content-center d-flex flex-column">
+
+        <div class="items-display d-flex justify-content-between mt-3" *ngFor="let todo of todos" @slideIn>
+
+            <div class="items d-flex flex-row align-items-center">
+                <input [(ngModel)]="todo.done" type="checkbox">
+                <h1 class="mb-1 ml-2 todo-title" [ngClass]="{'done': todo.done}">{{todo.title}}</h1>
+            </div>
+
+            <div class="icon-container icon mb-1">
+                <i (click)="remove(todo.title)" class="fa fa-times iconTimes p-2"></i>
+            </div>
+
+        </div>
+
+    </div>
+
+

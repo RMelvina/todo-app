@@ -1,0 +1,10 @@
+<div class="addTodos-container d-flex flex-row">
+    <div class="input-container bg-info">
+        <input [(ngModel)]="todoTitle" placeholder="New Task" type="text" class="addTodos pl-2 h-100"
+            (keydown.enter)="addTodo()">
+    </div>
+    <div class="btn-container">
+        <button (click)="addTodo()" class="btn addBtn w-100">ADD</button>
+    </div>
+
+</div>
